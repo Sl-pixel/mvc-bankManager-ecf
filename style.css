@@ -1,0 +1,279 @@
+/* stylee.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    /* Texte blanc */
+    background-color: #000000;
+    /* Fond noir */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    /* Enlève le soulignement de tous les liens */
+    color: inherit;
+    /* Hérite de la couleur du texte parent */
+}
+
+.navbar {
+    background-color: #000000;
+    padding: 10px 0;
+    border-bottom: 2px solid #FFFFFF;
+    /* Contour pour le header */
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    /* Permet aux éléments de passer à la ligne */
+    display: flex;
+
+}
+
+footer {
+    height: 100px;
+    /* Hauteur du footer */
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    border-top: 2px solid #FFFFFF;
+    /* Ajoute une bordure en haut pour délimiter le footer */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    /* Taille de la police */
+    color: #FFFFFF;
+    /* Couleur du texte */
+}
+
+.container {
+    width: 100vw;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.alert {
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+    /* Contour pour le footer */
+    background-color: #121212;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+/* Style pour le bouton de connexion/déconnexion */
+.navbar li:last-child a {
+    border: 2px solid #FFFFFF;
+    /* Contour pour le bouton */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Style pour les boutons et les inputs */
+button,
+input,
+textarea {
+    border: 1px solid #FFFFFF;
+    /* Légère bordure blanche */
+    background-color: transparent;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Centrer les éléments */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+table {
+    width: 70%;
+    border-collapse: separate;
+    border-spacing: 10px 8px;
+}
+
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+/* Style pour le select */
+select {
+    width: 100%;
+    /* Largeur à 100% pour correspondre aux autres champs */
+    padding: 8px;
+    /* Rembourrage pour plus de confort */
+    font-size: 16px;
+    /* Taille de la police */
+    border: 1px solid #FFFFFF;
+    /* Bordure blanche */
+    background-color: transparent;
+    /* Fond transparent */
+    color: #FFFFFF;
+    /* Couleur du texte */
+    border-radius: 4px;
+    /* Coins arrondis */
+}
+
+
+main {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerHome {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-container {
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 200px;
+    /* Largeur de la boîte */
+    height: 60px;
+    /* Hauteur de la boîte */
+    border: 2px solid #FFFFFF;
+    /* Contour blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transition pour l'effet de survol */
+    cursor: pointer;
+    /* Change le curseur au survol */
+}
+
+.box h2 {
+    margin: 0;
+    font-size: 24px;
+    /* Taille de la police */
+    color: #FFFFFF;
+    /* Couleur du texte */
+}
+
+.box:hover {
+    background-color: #FFFFFF;
+    /* Couleur de fond au survol */
+    color: #000000;
+    /* Couleur du texte au survol */
+}
+
+.box:hover h2 {
+    color: #000000;
+    /* Couleur du texte au survol */
+}
+
+
+select:focus {
+    background-color: black;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    min-height: 1em;
+    margin-top: 4px;
+}
+
+input.error {
+    border-color: red;
+}
+
+/* Media Queries */
+
+
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        height: fit-content;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    table {
+        width: 70%;
+        border-collapse: collapse;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+
+    footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
